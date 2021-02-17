@@ -1,0 +1,178 @@
+<style type="text/css">
+	@import url(https://fonts.googleapis.com/css?family=Exo+2:200i);
+
+:root {
+  /* Base font size */
+  font-size: 4px;
+
+  /* Set neon color */
+  --neon-text-color: #f40;
+  --neon-border-color: #08f;
+}
+
+body {
+  font-family: 'Exo 2', sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: url('movie31.jpg');
+  min-height: 30vh;
+}
+
+h1 {
+  font-size: 13rem;
+  font-weight: 200;
+  font-style: italic;
+  color: #fff;
+  padding: 4rem 6rem 5.5rem;
+  border: 0.4rem solid #fff;
+  border-radius: 2rem;
+  text-transform: uppercase;
+  animation: flicker 1.5s infinite alternate;
+}
+
+h1::-moz-selection {
+  background-color: var(--neon-border-color);
+  color: var(--neon-text-color);
+}
+
+h1::selection {
+  background-color: var(--neon-border-color);
+  color: var(--neon-text-color);
+}
+
+h1:focus {
+  outline: none;
+}
+
+/* Animate neon flicker */
+@keyframes flicker {
+
+    0%, 19%, 21%, 23%, 25%, 54%, 56%, 100% {
+
+        text-shadow:
+            -0.2rem -0.2rem 1rem #fff,
+            0.2rem 0.2rem 1rem #fff,
+            0 0 2rem var(--neon-text-color),
+            0 0 4rem var(--neon-text-color),
+            0 0 6rem var(--neon-text-color),
+            0 0 8rem var(--neon-text-color),
+            0 0 10rem var(--neon-text-color);
+
+        box-shadow:
+            0 0 .5rem #fff,
+            inset 0 0 .5rem #fff,
+            0 0 2rem var(--neon-border-color),
+            inset 0 0 2rem var(--neon-border-color),
+            0 0 4rem var(--neon-border-color),
+            inset 0 0 4rem var(--neon-border-color);
+    }
+
+    20%, 24%, 55% {
+        text-shadow: none;
+        box-shadow: none;
+    }
+}
+.main{
+  max-width: 50px;
+  margin: auto;
+}
+body{
+  text-align: center;
+  font-size: 30px;
+}
+h1{
+  margin-top: -190px;
+}
+input[type=text]{
+	width: 200%;
+	height: 150px;
+	box-sizing: border-box;
+	padding: 1px 1px;
+	background: #fff;
+	outline: none;
+	border:none;
+	border-bottom: 1px ridge #fff;
+	border-radius: 5px;
+	margin: 5px;
+	font-weight: bold;
+	color: #92a8d1;
+}
+
+ul{
+  float: right;
+  list-style-type: none;
+  margin-top: -1600px;
+  margin-right: -20px;
+
+}
+ul li{
+  display: inline-block;
+}
+ul li a{
+  text-decoration: none;
+  color: #fff;
+  padding: 5px 20px;
+  border: 1px solid transparent;
+  transition: 0.6s ease;
+}
+ul li a:hover{
+  background-color: #fff;
+  color: #000;
+}
+h2{
+  margin-top: 400px;
+  color: #fff;
+}
+.a{
+	text-align:center;
+	color:#111;
+}
+
+
+</style>
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Final Page</title>
+</head>
+<style>
+body {
+    background-image:url("http://www.solidbackgrounds.com/2560x1440-white-solid-color-background.html");
+}
+input[type=text]{
+	width: 200%;
+	height: 100px;
+	box-sizing: border-box;
+	padding: 1px 1px;
+	background: #fff;
+	outline: none;
+	top:20%;
+	border:none;
+	border-bottom: 1px ridge #fff;
+	border-radius: 5px;
+	margin: 5px;
+	font-weight: bold;
+	color: #92a8d1;
+}
+
+</style>
+<body>
+	<h1 contenteditable spellcheck="false">Movie Recommended</h1>
+	<div class="a">
+	{{a}}
+	{{b}}
+	</div>
+</body>
+     {% for i in contexts %}
+	     {{ i }}
+	 {% endfor %}
+		</form>
+		<div class="main">
+			<ul>
+				<li><a href="frend2.html">  Log out </a></li>
+			</ul>
+		</div>
+</body>
+</html>
